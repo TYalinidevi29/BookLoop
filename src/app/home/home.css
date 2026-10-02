@@ -1,0 +1,177 @@
+.home-page {
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+/* Hero */
+
+.hero {
+  min-height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background: #f4f7ff;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.secondary-btn {
+  background: white;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+
+/* Features */
+
+.features {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.features h2,
+.how-it-works h2 {
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  width: 260px;
+  padding: 25px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: white;
+}
+
+.feature-card h3 {
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+
+/* How it works */
+
+.how-it-works {
+  padding: 60px 40px;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.step {
+  width: 250px;
+}
+
+.step span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.step h3 {
+  margin: 15px 0 10px;
+}
+
+.step p {
+  color: #666;
+  line-height: 1.5;
+}
+
+
+/* CTA */
+
+.cta {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.cta h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+
+@media (max-width: 600px) {
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .features,
+  .how-it-works {
+    padding: 45px 20px;
+  }
+
+}

@@ -1,0 +1,53 @@
+<div class="navbar">
+
+  <div class="logo">
+    <span class="logo-icon">📚</span>
+    <h2>BookLoop</h2>
+  </div>
+
+  <nav>
+    <a routerLink="/">Home</a>
+    <a routerLink="/books">Browse Books</a>
+    <a routerLink="/my-books">My Books</a>
+    <a routerLink="/my-requests">My Requests</a>
+    <a routerLink="/login">Login</a>
+    <a routerLink="/register" class="register-btn">Register</a>
+  </nav>
+
+</div>
+
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+
+<footer class="footer">
+
+  <div class="footer-content">
+
+    <div class="footer-brand">
+      <h2>📚 BookLoop</h2>
+      <p>
+        Share books, discover stories and connect with readers.
+      </p>
+    </div>
+
+    <div class="footer-links">
+
+      <h3>Quick Links</h3>
+
+      <a routerLink="/">Home</a>
+      <a routerLink="/books">Browse Books</a>
+      <a routerLink="/my-books">My Books</a>
+      <a routerLink="/my-requests">My Requests</a>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 BookLoop. All rights reserved.</p>
+  </div>
+
+</footer>
