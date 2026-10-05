@@ -55,8 +55,6 @@ router.post('/login', async (req, res) => {
 
   try {
 
-    console.log('LOGIN REQUEST:', req.body);
-
     const { email, password } = req.body;
 
     if (!email || !password) {
@@ -66,8 +64,6 @@ router.post('/login', async (req, res) => {
     }
 
     const user = await User.findOne({ email });
-
-    console.log('USER FOUND:', user);
 
     if (!user) {
       return res.status(400).json({
@@ -79,8 +75,6 @@ router.post('/login', async (req, res) => {
       password,
       user.password
     );
-
-    console.log('PASSWORD MATCH:', passwordMatch);
 
     if (!passwordMatch) {
       return res.status(400).json({

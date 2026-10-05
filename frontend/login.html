@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – BookLoop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar container -->
+  <header id="navbar"></header>
+
+  <main class="container" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
+    <div class="form-card" style="width: 100%; max-width: 420px; margin: 0;">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <span style="font-size: 2.5rem;">📖</span>
+        <h1 style="font-size: 1.6rem; font-weight: 700; margin-top: 8px;">Welcome Back</h1>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Log in to manage your books and book requests</p>
+      </div>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            placeholder="you@example.com"
+            required
+            autocomplete="email"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            placeholder="Enter your password"
+            required
+            autocomplete="current-password"
+          >
+        </div>
+
+        <button type="submit" id="login-btn" class="btn btn-primary btn-block" style="margin-top: 22px;">
+          Log In
+        </button>
+      </form>
+
+      <div class="form-footer-link">
+        Don’t have an account? <a href="register.html">Register here</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 BookLoop – Book Sharing & Exchange Platform.</p>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

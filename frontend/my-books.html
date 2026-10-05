@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Books – BookLoop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar container -->
+  <header id="navbar"></header>
+
+  <main class="container">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">My Book Collection</h1>
+        <p class="page-subtitle">Manage the books you have made available for exchange</p>
+      </div>
+    </div>
+
+    <!-- Layout: Add Book Form + My Books List -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; align-items: start;">
+      <!-- Add Book Form Card -->
+      <div class="form-card" style="margin: 0; max-width: 100%;">
+        <h2 style="font-size: 1.35rem; margin-bottom: 6px;">➕ Add a New Book</h2>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
+          Share a book with the community so others can discover and request it.
+        </p>
+
+        <form id="add-book-form">
+          <div class="form-group">
+            <label for="book-title" class="form-label">Book Title *</label>
+            <input
+              type="text"
+              id="book-title"
+              class="form-control"
+              placeholder="e.g. The Great Gatsby"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="book-author" class="form-label">Author *</label>
+            <input
+              type="text"
+              id="book-author"
+              class="form-control"
+              placeholder="e.g. F. Scott Fitzgerald"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="book-category" class="form-label">Category / Genre *</label>
+            <input
+              type="text"
+              id="book-category"
+              class="form-control"
+              list="category-suggestions"
+              placeholder="e.g. Classic Fiction, Sci-Fi, Biography..."
+              required
+            >
+            <datalist id="category-suggestions">
+              <option value="Fiction">
+              <option value="Non-Fiction">
+              <option value="Science Fiction">
+              <option value="Mystery & Thriller">
+              <option value="Biography & Memoir">
+              <option value="Technology & Coding">
+              <option value="History">
+              <option value="Self-Help & Philosophy">
+            </datalist>
+          </div>
+
+          <button type="submit" id="add-book-btn" class="btn btn-primary btn-block">
+            Add Book to Collection
+          </button>
+        </form>
+      </div>
+
+      <!-- My Books List -->
+      <div>
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+          <h2 style="font-size: 1.35rem;">Your Shared Books</h2>
+          <span id="my-books-count" class="badge badge-accepted">0 books</span>
+        </div>
+
+        <div id="my-books-container" class="book-grid" style="grid-template-columns: 1fr; margin-bottom: 30px;">
+          <div class="empty-state">
+            <div class="empty-state-icon">⏳</div>
+            <h3>Loading your books...</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 BookLoop – Book Sharing & Exchange Platform.</p>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/my-books.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Requests – BookLoop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar container -->
+  <header id="navbar"></header>
+
+  <main class="container">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Book Exchange Requests</h1>
+        <p class="page-subtitle">Track books you’ve requested and view requests sent to your books</p>
+      </div>
+      <a href="browse.html" class="btn btn-outline btn-sm">Browse More Books</a>
+    </div>
+
+    <!-- Tab navigation -->
+    <div style="display: flex; gap: 10px; margin-bottom: 24px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
+      <button id="tab-sent-btn" class="btn btn-primary btn-sm">
+        📤 My Sent Requests (<span id="sent-count">0</span>)
+      </button>
+      <button id="tab-received-btn" class="btn btn-outline btn-sm">
+        📥 Received Requests (<span id="received-count">0</span>)
+      </button>
+    </div>
+
+    <!-- Section 1: My Sent Requests -->
+    <section id="sent-requests-section">
+      <div class="table-card">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Book Title</th>
+              <th>Category</th>
+              <th>Book Owner</th>
+              <th>Status</th>
+              <th>Date Requested</th>
+            </tr>
+          </thead>
+          <tbody id="sent-requests-body">
+            <tr>
+              <td colspan="5" style="text-align: center; padding: 40px;">
+                <div class="empty-state-icon">⏳</div>
+                <p>Loading your requests...</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 2: Received Requests (Requests from others for your books) -->
+    <section id="received-requests-section" style="display: none;">
+      <div class="table-card">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Your Book</th>
+              <th>Requested By</th>
+              <th>Requester Email</th>
+              <th>Current Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="received-requests-body">
+            <tr>
+              <td colspan="5" style="text-align: center; padding: 40px;">
+                <div class="empty-state-icon">⏳</div>
+                <p>Loading received requests...</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 BookLoop – Book Sharing & Exchange Platform.</p>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/my-requests.js"></script>
+</body>
+</html>

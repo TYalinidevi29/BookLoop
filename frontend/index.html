@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookLoop – Book Sharing & Exchange Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar container -->
+  <header id="navbar"></header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Welcome to <span>BookLoop</span></h1>
+      <p class="hero-desc">
+        A simple, friendly book sharing and exchange platform. Share books from your shelf, explore titles from other readers, and request your next favorite read with ease!
+      </p>
+      <div class="hero-cta">
+        <a href="browse.html" class="btn btn-primary" style="padding: 12px 24px; font-size: 1.05rem;">
+          📖 Browse Books
+        </a>
+        <a href="my-books.html" class="btn btn-outline" style="padding: 12px 24px; font-size: 1.05rem;">
+          ➕ Share a Book
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Platform Features -->
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3 class="feature-title">Share Your Books</h3>
+        <p class="feature-desc">Add books you’ve finished reading so other readers in the community can enjoy them.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3 class="feature-title">Discover & Search</h3>
+        <p class="feature-desc">Quickly find books by title, author, or category across the entire community catalog.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🤝</div>
+        <h3 class="feature-title">Request & Exchange</h3>
+        <p class="feature-desc">Send simple exchange requests to book owners and keep track of your request statuses.</p>
+      </div>
+    </div>
+
+    <!-- Featured / Recent Books Preview -->
+    <div class="page-header" style="margin-top: 20px;">
+      <div>
+        <h2 class="page-title">Recently Added Books</h2>
+        <p class="page-subtitle">Fresh additions from fellow readers</p>
+      </div>
+      <a href="browse.html" class="btn btn-outline btn-sm">View All &rarr;</a>
+    </div>
+
+    <div id="recent-books-list" class="book-grid">
+      <div class="empty-state" style="grid-column: 1 / -1;">
+        <div class="empty-state-icon">⏳</div>
+        <h3>Loading books...</h3>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 BookLoop – Book Sharing & Exchange Platform. Built with Node.js, Express & MongoDB.</p>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

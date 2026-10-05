@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Books – BookLoop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar container -->
+  <header id="navbar"></header>
+
+  <main class="container">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Browse Available Books</h1>
+        <p class="page-subtitle">Discover books shared by members of the BookLoop community</p>
+      </div>
+      <a href="my-books.html" class="btn btn-primary btn-sm">+ Share Your Book</a>
+    </div>
+
+    <!-- Search Section -->
+    <div class="search-wrapper">
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Search books by title, author, or category..."
+      >
+      <button id="search-btn" class="btn btn-primary">
+        🔍 Search
+      </button>
+      <button id="reset-search-btn" class="btn btn-outline" style="display: none;">
+        ✕ Clear
+      </button>
+    </div>
+
+    <!-- Search feedback / count -->
+    <div id="search-feedback" style="margin-bottom: 16px; font-size: 0.95rem; color: var(--text-muted); display: none;"></div>
+
+    <!-- Books Grid -->
+    <div id="books-grid" class="book-grid">
+      <div class="empty-state" style="grid-column: 1 / -1;">
+        <div class="empty-state-icon">⏳</div>
+        <h3>Loading available books...</h3>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 BookLoop – Book Sharing & Exchange Platform.</p>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/browse.js"></script>
+</body>
+</html>
